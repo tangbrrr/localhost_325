@@ -6,6 +6,7 @@ import (
 	"errors"
 	"time"
 
+	"github.com/go-redis/redis/v8"
 	cache "github.com/tangbo/twatt/mond/wind/cache/define"
 	"github.com/tangbo/twatt/mond/wind/logger"
 	mrand "github.com/tangbo/twatt/mond/wind/utils/rand"

@@ -8,6 +8,7 @@ import (
 )
 
 type BizdemoService struct {
+	Bizdemo.UnimplementedBizdemoServiceServer
 	_log logger.Logger
 	app  *app.App
 }

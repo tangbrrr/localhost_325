@@ -2,10 +2,10 @@ package demo
 
 import (
 	"context"
+	mredis "github.com/tangbo/twatt/mond/wind/cache/redis"
+	mongodb "github.com/tangbo/twatt/mond/wind/db/mongo"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	mredis "mond/wind/cache/redis"
-	mongodb "mond/wind/db/mongo"
 )
 
 type Service struct {

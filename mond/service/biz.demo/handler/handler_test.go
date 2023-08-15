@@ -3,8 +3,8 @@ package handler
 import (
 	"context"
 	"fmt"
-	"mond/service/biz.demo/proto"
-	"mond/wind"
+	"github.com/tangbo/twatt/mond/service/biz.demo/proto"
+	"github.com/tangbo/twatt/mond/wind"
 	"os"
 	"testing"
 )

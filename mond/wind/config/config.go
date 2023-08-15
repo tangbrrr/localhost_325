@@ -19,6 +19,7 @@ import (
 	"github.com/tangbo/twatt/mond/wind/utils"
 	constant2 "github.com/tangbo/twatt/mond/wind/utils/constant"
 	"go.uber.org/zap"
+	"gopkg.in/yaml.v2"
 )
 
 type ConfigBase struct {

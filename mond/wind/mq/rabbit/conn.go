@@ -5,6 +5,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/rabbitmq/amqp091-go"
 	"github.com/tangbo/twatt/mond/wind/config"
 	"github.com/tangbo/twatt/mond/wind/logger"
 	"github.com/tangbo/twatt/mond/wind/utils/pool"

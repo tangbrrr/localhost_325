@@ -13,6 +13,7 @@ import (
 )
 
 type {{.AppId}}Service struct {
+	{{.AppId}}.Unimplemented{{.AppId}}ServiceServer
 	_log logger.Logger
 	app *app.App
 }
@@ -34,8 +35,8 @@ package handler
 import (
 	"context"
 	"fmt"
-	"mond/wind"
-	"mond/service/{{.FolderPath}}/proto"
+	"github.com/tangbo/twatt/mond/wind"
+	"github.com/tangbo/twatt/mond/service/{{.FolderPath}}/proto"
 	"os"
 	"testing"
 )
@@ -68,10 +69,10 @@ import (
 	"encoding/json"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
-	hook2 "mond/wind/hook"
-	"mond/wind/logger"
-	dynamicConfig "mond/service/{{.FolderPath}}/infra/config"
-	"mond/service/{{.FolderPath}}/proto"
+	hook2 "github.com/tangbo/twatt/mond/wind/hook"
+	"github.com/tangbo/twatt/mond/wind/logger"
+	dynamicConfig "github.com/tangbo/twatt/mond/service/{{.FolderPath}}/infra/config"
+	"github.com/tangbo/twatt/mond/service/{{.FolderPath}}/proto"
 )
 
 type hook struct {
@@ -130,10 +131,10 @@ import (
 	"context"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
-	"mond/wind"
-	"mond/service/{{.FolderPath}}/app"
-	"mond/service/{{.FolderPath}}/domain/demo"
+	"go.mongodb.org/mongo-driver/bson"
+	"github.com/tangbo/twatt/mond/wind"
+	"github.com/tangbo/twatt/mond/service/{{.FolderPath}}/app"
+	"github.com/tangbo/twatt/mond/service/{{.FolderPath}}/domain/demo"
 	"sync"
 	"time"
 )
@@ -163,8 +164,8 @@ func (m *{{.AppId}}Service) ResourceInit(ctx context.Context) error {
 	}
 	index := []mongo.IndexModel{
 		{
-			Keys: bsonx.Doc{
-				{Key: "id", Value: bsonx.Int32(1)},
+			Keys: bson.D{
+				{Key: "id", Value: 1},
 			},
 			Options: options.Index().SetBackground(true).SetUnique(true),
 		},

@@ -8,10 +8,10 @@ import (
 	"errors"
 	"fmt"
 
-	merr "mond/wind/err"
-	mgrpc "mond/wind/grpc"
-	"mond/wind/config"
-	"mond/wind/env"
+	merr "github.com/tangbo/twatt/mond/wind/err"
+	mgrpc "github.com/tangbo/twatt/mond/wind/grpc"
+	"github.com/tangbo/twatt/mond/wind/config"
+	"github.com/tangbo/twatt/mond/wind/env"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
@@ -68,6 +68,7 @@ func GetGrpcBizdemoServiceClient() (GrpcBizdemoServiceClient, error) {
 }
 
 type BizdemoServiceServerImpl struct {
+	UnimplementedBizdemoServiceServer
 	svc BizdemoServiceServer
 }
 

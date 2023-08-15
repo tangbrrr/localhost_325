@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/ext"
 	"github.com/opentracing/opentracing-go/log"
 	"github.com/tangbo/twatt/mond/wind/mq/rabbit/function"

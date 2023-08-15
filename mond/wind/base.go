@@ -18,7 +18,6 @@ import (
 	"github.com/tangbo/twatt/mond/wind/logger"
 	"github.com/tangbo/twatt/mond/wind/mq/rabbit"
 	"github.com/tangbo/twatt/mond/wind/registry"
-	"github.com/tangbo/twatt/mond/wind/reload"
 	"github.com/tangbo/twatt/mond/wind/resolver"
 	"github.com/tangbo/twatt/mond/wind/sentinel"
 	"github.com/tangbo/twatt/mond/wind/sentry"
@@ -126,7 +125,7 @@ func InitFrame(hook hook.FrameStartHook, opts ...Option) {
 			logger.GetLogger().Info(ctx, "框架开始注册服务")
 			go base.health.Health()
 			base.registryBase.RegistryService()
-			reload.Reload(ctx)
+			//reload.Reload(ctx)
 			env.StateEnv = env.Running
 			logger.GetLogger().Info(ctx, "框架开始平稳运行中")
 		}

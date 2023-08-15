@@ -3,12 +3,12 @@ package handler
 import (
 	"context"
 	"encoding/json"
+	dynamicConfig "github.com/tangbo/twatt/mond/service/biz.demo/infra/config"
+	"github.com/tangbo/twatt/mond/service/biz.demo/proto"
+	hook2 "github.com/tangbo/twatt/mond/wind/hook"
+	"github.com/tangbo/twatt/mond/wind/logger"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
-	dynamicConfig "mond/service/biz.demo/infra/config"
-	"mond/service/biz.demo/proto"
-	hook2 "mond/wind/hook"
-	"mond/wind/logger"
 )
 
 type hook struct {

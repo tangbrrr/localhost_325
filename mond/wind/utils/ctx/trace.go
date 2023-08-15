@@ -3,7 +3,9 @@ package mctx
 import (
 	"context"
 
+	"github.com/opentracing/opentracing-go"
 	"github.com/tangbo/twatt/mond/wind/utils/constant"
+	"github.com/uber/jaeger-client-go"
 )
 
 func WithTraceId(ctx context.Context, span opentracing.Span) context.Context {

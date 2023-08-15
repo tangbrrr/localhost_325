@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"runtime/debug"
 
+	"github.com/getsentry/sentry-go"
 	"github.com/tangbo/twatt/mond/wind/config"
 	"github.com/tangbo/twatt/mond/wind/logger"
 	"go.uber.org/zap"

@@ -4,6 +4,8 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/go-redis/redis/v8"
+	"github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/ext"
 	"github.com/opentracing/opentracing-go/log"
 	"github.com/tangbo/twatt/mond/wind/utils/constant"

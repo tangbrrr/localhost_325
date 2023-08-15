@@ -3,6 +3,7 @@ package sentry
 import (
 	"sync"
 
+	"github.com/getsentry/sentry-go"
 	"github.com/tangbo/twatt/mond/wind/config"
 )
 

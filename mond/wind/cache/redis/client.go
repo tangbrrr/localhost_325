@@ -7,6 +7,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/go-redis/redis/v8"
 	"github.com/tangbo/twatt/mond/wind/config"
 	"github.com/tangbo/twatt/mond/wind/env"
 )

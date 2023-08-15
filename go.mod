@@ -5,6 +5,7 @@ go 1.20
 require (
 	github.com/alibaba/sentinel-golang v1.0.4
 	github.com/bwmarrin/snowflake v0.3.0
+	github.com/getsentry/sentry-go v0.23.0
 	github.com/go-errors/errors v1.4.2
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/golang/protobuf v1.5.3
@@ -15,6 +16,7 @@ require (
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/pkg/errors v0.9.1
+	github.com/rabbitmq/amqp091-go v1.5.0
 	github.com/satori/go.uuid v1.2.0
 	github.com/spf13/cobra v1.7.0
 	github.com/spf13/viper v1.16.0
@@ -26,6 +28,7 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230814215434-ca7cfce7776a
 	google.golang.org/grpc v1.57.0
 	google.golang.org/protobuf v1.31.0
+	gopkg.in/yaml.v2 v2.4.0
 )
 
 require (
@@ -63,7 +66,7 @@ require (
 	github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/klauspost/compress v1.15.15 // indirect
+	github.com/klauspost/compress v1.16.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
@@ -124,7 +127,6 @@ require (
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
-	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	k8s.io/api v0.26.3 // indirect
 	k8s.io/apimachinery v0.27.0-alpha.3 // indirect

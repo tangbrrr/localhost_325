@@ -2,12 +2,12 @@ package handler
 
 import (
 	"context"
+	"github.com/tangbo/twatt/mond/service/biz.demo/app"
+	"github.com/tangbo/twatt/mond/service/biz.demo/domain/demo"
+	"github.com/tangbo/twatt/mond/wind"
+	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
-	"mond/service/biz.demo/app"
-	"mond/service/biz.demo/domain/demo"
-	"mond/wind"
 	"sync"
 	"time"
 )
@@ -37,8 +37,8 @@ func (m *BizdemoService) ResourceInit(ctx context.Context) error {
 	}
 	index := []mongo.IndexModel{
 		{
-			Keys: bsonx.Doc{
-				{Key: "id", Value: bsonx.Int32(1)},
+			Keys: bson.D{
+				{Key: "id", Value: 1},
 			},
 			Options: options.Index().SetBackground(true).SetUnique(true),
 		},

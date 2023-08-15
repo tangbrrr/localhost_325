@@ -29,8 +29,7 @@ var (
 const (
 	configYamlStr = `
 appId: %s
-port: %d
-	`
+port: %d`
 )
 
 var serviceCmd = &cobra.Command{
@@ -159,16 +158,16 @@ var serviceCmd = &cobra.Command{
 		utils.FormatAndWrite(f, buffer.Bytes())
 		buffer.Reset()
 
-		os.MkdirAll(folderPath+"/infra/thirdparty/user", os.ModePerm)
-		f, _ = os.Create(fmt.Sprintf("%s/infra/thirdparty/user/user.go", folderPath))
-		err = infraThirdPartyTemplate.Execute(buffer, map[string]string{
-			"AppId":      AppId,
-			"FolderPath": folderPath,
-			"Port":       fmt.Sprintf("%d", Port),
-		})
-		utils.MustNil(err)
-		utils.FormatAndWrite(f, buffer.Bytes())
-		buffer.Reset()
+		//os.MkdirAll(folderPath+"/infra/thirdparty/user", os.ModePerm)
+		//f, _ = os.Create(fmt.Sprintf("%s/infra/thirdparty/user/user.go", folderPath))
+		//err = infraThirdPartyTemplate.Execute(buffer, map[string]string{
+		//	"AppId":      AppId,
+		//	"FolderPath": folderPath,
+		//	"Port":       fmt.Sprintf("%d", Port),
+		//})
+		//utils.MustNil(err)
+		//utils.FormatAndWrite(f, buffer.Bytes())
+		//buffer.Reset()
 
 		os.MkdirAll(folderPath+"/proto", os.ModePerm)
 		f, _ = os.Create(fmt.Sprintf("%s/proto/%s.proto", folderPath, AppId))
